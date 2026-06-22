@@ -101,6 +101,16 @@
     <Compile Include="MODELO\M_Proveedor.cs" />
     <Compile Include="MODELO\M_Usuario.cs" />
     <Compile Include="MODELO\M_Venta.cs" />
+    <Compile Include="PezFinalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PezFinalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PezFinalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PezFinalDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REPORTES\FrmReporteVentas.cs">
@@ -169,6 +179,12 @@
     <Compile Include="VISTA\FrmReportes.Designer.cs">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmReporteVents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmReporteVents.Designer.cs">
+      <DependentUpon>FrmReporteVents.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +210,8 @@
     <EmbeddedResource Include="REPORTES\FrmReporteVentas.resx">
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Report1.rdlc" />
+    <EmbeddedResource Include="REPORTES\ReportePerido.rdlc" />
     <EmbeddedResource Include="VISTA\FrmAutentificacion.resx">
       <DependentUpon>FrmAutentificacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +242,9 @@
     <EmbeddedResource Include="VISTA\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmReporteVents.resx">
+      <DependentUpon>FrmReporteVents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +274,28 @@
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PezFinalDataSet.xsc">
+      <DependentUpon>PezFinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PezFinalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PezFinalDataSet.xss">
+      <DependentUpon>PezFinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet1.xsc">
+      <DependentUpon>PezFinalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PezFinalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PezFinalDataSet1.xss">
+      <DependentUpon>PezFinalDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

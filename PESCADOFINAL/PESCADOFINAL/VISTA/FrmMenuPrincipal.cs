@@ -63,7 +63,7 @@ namespace PESCADOFINAL.VISTA
 
         private void botonReportes_Click(object sender, EventArgs e)
         {
-            FrmReportes reportes = new FrmReportes();
+            FrmReporteVents reportes = new FrmReporteVents();
             reportes.Show();
 
             this.Hide();
