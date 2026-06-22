@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\vista\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\vista\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\controlador\\c_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\controlador\\c_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\modelo\\m_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\modelo\\m_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\controlador\\c_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\controlador\\c_categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\pescadofinal\\pescadofinal\\modelo\\m_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\modelo\\m_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCategoria.cs",
-              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmCategoria.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCategoria.cs*",
-              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmCategoria.cs*",
-              "ViewState": "AgIAALEAAAAAAAAAAADwv9cAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "C_Venta.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\CONTROLADOR\\C_Venta.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\CONTROLADOR\\C_Venta.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\CONTROLADOR\\C_Venta.cs",
+              "RelativeToolTip": "PESCADOFINAL\\CONTROLADOR\\C_Venta.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv2AAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T01:47:12.538Z",
+              "WhenOpened": "2026-06-22T02:50:05.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCategoria.cs",
-              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmCategoria.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCategoria.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmCategoria.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T01:47:04.033Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "C_Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\CONTROLADOR\\C_Categoria.cs",
-              "RelativeDocumentMoniker": "PESCADOFINAL\\CONTROLADOR\\C_Categoria.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\CONTROLADOR\\C_Categoria.cs*",
-              "RelativeToolTip": "PESCADOFINAL\\CONTROLADOR\\C_Categoria.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Title": "M_Venta.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\MODELO\\M_Venta.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\MODELO\\M_Venta.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\MODELO\\M_Venta.cs",
+              "RelativeToolTip": "PESCADOFINAL\\MODELO\\M_Venta.cs",
+              "ViewState": "AgIAAHwBAAAAAAAAAADwv6IBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T01:40:11.227Z",
+              "WhenOpened": "2026-06-22T02:49:51.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "M_Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\MODELO\\M_Categoria.cs",
-              "RelativeDocumentMoniker": "PESCADOFINAL\\MODELO\\M_Categoria.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\MODELO\\M_Categoria.cs*",
-              "RelativeToolTip": "PESCADOFINAL\\MODELO\\M_Categoria.cs*",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswKQAAAABAAAAAAAAAA==",
+              "Title": "FrmVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmVentas.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T01:40:09.013Z",
+              "WhenOpened": "2026-06-17T17:01:43.866Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmVentas.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs*",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmVentas.cs*",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAswJwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T17:04:51.919Z",
               "EditorCaption": ""
             }
           ]
