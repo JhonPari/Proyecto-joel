@@ -78,22 +78,24 @@ namespace PESCADOFINAL.VISTA
 
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			if (txtNombre.Text.Trim() == "")
+			string nombre = txtNombre.Text.Trim().ToUpper();
+
+			if (nombre == "")
 			{
 				MessageBox.Show("Ingrese el nombre de la categoria.");
 				txtNombre.Focus();
 				return;
 			}
 
-			if (C_Categoria.existe(txtNombre.Text.Trim()) > 0)
+			if (C_Categoria.existe(nombre) > 0)
 			{
 				MessageBox.Show("Esa categoria ya existe.");
+				txtNombre.Focus();
 				return;
 			}
 
 			int resultado =
-				C_Categoria.registrar(
-					txtNombre.Text.Trim());
+				C_Categoria.registrar(nombre);
 
 			if (resultado > 0)
 			{
@@ -117,17 +119,43 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (txtNombre.Text.Trim() == "")
+			string nombre = txtNombre.Text.Trim().ToUpper();
+
+			if (nombre == "")
 			{
 				MessageBox.Show("Ingrese el nombre.");
 				txtNombre.Focus();
 				return;
 			}
 
+			foreach (DataGridViewRow fila in dgvCategorias.Rows)
+			{
+				if (fila.IsNewRow)
+					continue;
+
+				if (fila.Cells["CODIGO"].Value == null ||
+					fila.Cells["CODIGO"].Value == DBNull.Value)
+					continue;
+
+				int codigoFila =
+					Convert.ToInt32(fila.Cells["CODIGO"].Value);
+
+				string nombreFila =
+					fila.Cells["NOMBRE"].Value?.ToString().Trim().ToUpper() ?? "";
+
+				if (codigoFila != codigoSeleccionado &&
+					nombreFila == nombre)
+				{
+					MessageBox.Show("Ya existe otra categoria con ese nombre.");
+					txtNombre.Focus();
+					return;
+				}
+			}
+
 			int resultado =
 				C_Categoria.editar(
 					codigoSeleccionado,
-					txtNombre.Text.Trim());
+					nombre);
 
 			if (resultado > 0)
 			{

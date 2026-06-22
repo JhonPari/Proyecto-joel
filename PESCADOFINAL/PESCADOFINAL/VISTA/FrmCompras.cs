@@ -36,6 +36,8 @@ namespace PESCADOFINAL.VISTA
 			cargarProveedores();
 			cargarCategorias();
 			cargarProductos();
+
+			cmbProducto.SelectedIndexChanged += cmbProducto_SelectedIndexChanged;
 		}
 
 		private void configurarGrilla()
@@ -118,11 +120,27 @@ namespace PESCADOFINAL.VISTA
 				{
 					txtTamano.Text = fila["TAMANO"].ToString();
 				}
+
+				if (fila.Row.Table.Columns.Contains("PRECIO"))
+				{
+					txtPrecioUnit.Text = fila["PRECIO"].ToString();
+				}
+				else if (fila.Row.Table.Columns.Contains("PRECIO_COSTO"))
+				{
+					txtPrecioUnit.Text = fila["PRECIO_COSTO"].ToString();
+				}
+				else
+				{
+					txtPrecioUnit.Clear();
+				}
 			}
 			else
 			{
 				txtProducto.Enabled = true;
+				txtTamano.Clear();
+				txtPrecioUnit.Clear();
 			}
+			//
 		}
 
 		private void txtProducto_TextChanged(object sender, EventArgs e)
