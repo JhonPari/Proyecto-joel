@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|c:\\users\\laura\\source\\repos\\pescadofinal\\pescadofinal\\vista\\frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\vista\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\reportes\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\reportes\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\reportes\\frmreporteventas.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\reportes\\frmreporteventas.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\vista\\frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\pescadofinal\\vista\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B50C240B-DE39-47A9-824A-45B071D6C5A4}|PESCADOFINAL\\PESCADOFINAL.csproj|solutionrelative:pescadofinal\\vista\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmProveedores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmProveedores.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmProveedores.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmProveedores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmProveedores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-18T15:40:45.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmReporteVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\REPORTES\\FrmReporteVentas.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\REPORTES\\FrmReporteVentas.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\REPORTES\\FrmReporteVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PESCADOFINAL\\REPORTES\\FrmReporteVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T16:48:15.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T17:01:43.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmVentas.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmVentas.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T17:04:51.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCompras.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCompras.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmCompras.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCompras.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmCompras.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T14:59:04.373Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmReporteVentas.rdlc [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\REPORTES\\FrmReporteVentas.rdlc",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\REPORTES\\FrmReporteVentas.rdlc",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\REPORTES\\FrmReporteVentas.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "PESCADOFINAL\\REPORTES\\FrmReporteVentas.rdlc [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2026-06-17T15:12:18.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmCompras.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCompras.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmCompras.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmCompras.cs*",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmCompras.cs*",
+              "ViewState": "AgIAABUBAAAAAAAAAAAgwDIBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T14:59:06.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmUsuarios.cs",
+              "RelativeDocumentMoniker": "PESCADOFINAL\\VISTA\\FrmUsuarios.cs",
+              "ToolTip": "C:\\Users\\laura\\source\\repos\\PESCADOFINAL\\PESCADOFINAL\\VISTA\\FrmUsuarios.cs",
+              "RelativeToolTip": "PESCADOFINAL\\VISTA\\FrmUsuarios.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwCYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T14:00:44.412Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
