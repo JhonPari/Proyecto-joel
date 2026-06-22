@@ -1,0 +1,72 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Visual Studio cache
+*.cache
+*.log
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+
+# Test results
+TestResults/
+
+# Publish output
+publish/
+
+# IIS Express
+.vsconfig
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Temporary files
+*.tmp
+*.temp
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Generated files
+Generated/
+Generated_Code/
+
+# Visual Studio indexes
+*.vsidx
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# SQL Server
+*.bak
+
+# Node.js (si usas frontend)
+node_modules/
+dist/
+build/
+
+# Secrets y configuraciones locales
+appsettings.Development.json
+secrets.json
