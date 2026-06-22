@@ -25,10 +25,14 @@ namespace PESCADOFINAL.VISTA
 			tip.SetToolTip(btnCancelar, "Limpiar los campos.");
 			tip.SetToolTip(btnVolver, "Cerrar y volver al menu principal.");
 
+			dgvCategorias.AllowUserToAddRows = false;
+
+			// Asegura que al hacer clic en cualquier parte de la fila cargue los datos
+			dgvCategorias.CellClick -= dgvCategorias_CellClick;
+			dgvCategorias.CellClick += dgvCategorias_CellClick;
+
 			listar();
 			estadoInicial();
-
-			dgvCategorias.AllowUserToAddRows = false;
 		}
 
 		private void listar()
@@ -52,7 +56,7 @@ namespace PESCADOFINAL.VISTA
 			}
 		}
 
-		private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			if (e.RowIndex < 0)
 				return;
@@ -76,9 +80,44 @@ namespace PESCADOFINAL.VISTA
 			btnEliminar.Enabled = true;
 		}
 
+		// Deja este método vacío si el Designer lo sigue llamando
+		private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			dgvCategorias_CellClick(sender, e);
+		}
+
+		private bool existeCategoriaEnGrilla(string nombre, int codigoIgnorar = 0)
+		{
+			string nombreComparar = nombre.Trim().ToUpper();
+
+			foreach (DataGridViewRow fila in dgvCategorias.Rows)
+			{
+				if (fila.IsNewRow)
+					continue;
+
+				if (fila.Cells["CODIGO"].Value == null ||
+					fila.Cells["CODIGO"].Value == DBNull.Value)
+					continue;
+
+				int codigoFila =
+					Convert.ToInt32(fila.Cells["CODIGO"].Value);
+
+				string nombreFila =
+					fila.Cells["NOMBRE"].Value?.ToString().Trim().ToUpper() ?? "";
+
+				if (codigoFila != codigoIgnorar &&
+					nombreFila == nombreComparar)
+				{
+					return true;
+				}
+			}
+
+			return false;
+		}
+
 		private void btnGuardar_Click(object sender, EventArgs e)
 		{
-			string nombre = txtNombre.Text.Trim().ToUpper();
+			string nombre = txtNombre.Text.Trim();
 
 			if (nombre == "")
 			{
@@ -87,7 +126,7 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (C_Categoria.existe(nombre) > 0)
+			if (existeCategoriaEnGrilla(nombre))
 			{
 				MessageBox.Show("Esa categoria ya existe.");
 				txtNombre.Focus();
@@ -119,7 +158,7 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			string nombre = txtNombre.Text.Trim().ToUpper();
+			string nombre = txtNombre.Text.Trim();
 
 			if (nombre == "")
 			{
@@ -128,28 +167,11 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			foreach (DataGridViewRow fila in dgvCategorias.Rows)
+			if (existeCategoriaEnGrilla(nombre, codigoSeleccionado))
 			{
-				if (fila.IsNewRow)
-					continue;
-
-				if (fila.Cells["CODIGO"].Value == null ||
-					fila.Cells["CODIGO"].Value == DBNull.Value)
-					continue;
-
-				int codigoFila =
-					Convert.ToInt32(fila.Cells["CODIGO"].Value);
-
-				string nombreFila =
-					fila.Cells["NOMBRE"].Value?.ToString().Trim().ToUpper() ?? "";
-
-				if (codigoFila != codigoSeleccionado &&
-					nombreFila == nombre)
-				{
-					MessageBox.Show("Ya existe otra categoria con ese nombre.");
-					txtNombre.Focus();
-					return;
-				}
+				MessageBox.Show("Ya existe otra categoria con ese nombre.");
+				txtNombre.Focus();
+				return;
 			}
 
 			int resultado =
