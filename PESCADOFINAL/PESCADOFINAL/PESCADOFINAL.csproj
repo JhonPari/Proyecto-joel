@@ -111,6 +111,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PezFinalDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PezFinalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PezFinalDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REPORTES\FrmReporteVentas.cs">
@@ -173,6 +178,18 @@
     <Compile Include="VISTA\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmReporteCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmReporteCategoria.Designer.cs">
+      <DependentUpon>FrmReporteCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmReporteProducto.Designer.cs">
+      <DependentUpon>FrmReporteProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,7 +228,9 @@
       <DependentUpon>FrmReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\Report1.rdlc" />
+    <EmbeddedResource Include="REPORTES\ReporteCategoria.rdlc" />
     <EmbeddedResource Include="REPORTES\ReportePerido.rdlc" />
+    <EmbeddedResource Include="REPORTES\ReporteProductos.rdlc" />
     <EmbeddedResource Include="VISTA\FrmAutentificacion.resx">
       <DependentUpon>FrmAutentificacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +257,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmReporteCategoria.resx">
+      <DependentUpon>FrmReporteCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmReporteProducto.resx">
+      <DependentUpon>FrmReporteProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
@@ -295,6 +320,17 @@
     </None>
     <None Include="PezFinalDataSet1.xss">
       <DependentUpon>PezFinalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet2.xsc">
+      <DependentUpon>PezFinalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PezFinalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PezFinalDataSet2.xss">
+      <DependentUpon>PezFinalDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

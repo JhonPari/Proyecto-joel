@@ -38,12 +38,14 @@
             this.botonUsuarios = new System.Windows.Forms.Button();
             this.botonProductos = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonElaborados
             // 
             this.botonElaborados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonElaborados.Location = new System.Drawing.Point(657, 302);
+            this.botonElaborados.Location = new System.Drawing.Point(666, 243);
             this.botonElaborados.Name = "botonElaborados";
             this.botonElaborados.Size = new System.Drawing.Size(189, 60);
             this.botonElaborados.TabIndex = 18;
@@ -54,7 +56,7 @@
             // botonCategorias
             // 
             this.botonCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCategorias.Location = new System.Drawing.Point(129, 301);
+            this.botonCategorias.Location = new System.Drawing.Point(34, 254);
             this.botonCategorias.Name = "botonCategorias";
             this.botonCategorias.Size = new System.Drawing.Size(189, 60);
             this.botonCategorias.TabIndex = 17;
@@ -65,7 +67,7 @@
             // btnCompras
             // 
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.Location = new System.Drawing.Point(395, 201);
+            this.btnCompras.Location = new System.Drawing.Point(332, 148);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(189, 61);
             this.btnCompras.TabIndex = 16;
@@ -76,7 +78,7 @@
             // btnProveedores
             // 
             this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.Location = new System.Drawing.Point(129, 201);
+            this.btnProveedores.Location = new System.Drawing.Point(34, 148);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(187, 61);
             this.btnProveedores.TabIndex = 15;
@@ -87,7 +89,7 @@
             // botonCerrarSesion
             // 
             this.botonCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCerrarSesion.Location = new System.Drawing.Point(532, 409);
+            this.botonCerrarSesion.Location = new System.Drawing.Point(341, 450);
             this.botonCerrarSesion.Name = "botonCerrarSesion";
             this.botonCerrarSesion.Size = new System.Drawing.Size(185, 58);
             this.botonCerrarSesion.TabIndex = 14;
@@ -98,18 +100,18 @@
             // botonReportes
             // 
             this.botonReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonReportes.Location = new System.Drawing.Point(268, 409);
+            this.botonReportes.Location = new System.Drawing.Point(337, 350);
             this.botonReportes.Name = "botonReportes";
             this.botonReportes.Size = new System.Drawing.Size(189, 61);
             this.botonReportes.TabIndex = 13;
-            this.botonReportes.Text = "Reportes";
+            this.botonReportes.Text = "Reporte Ventas";
             this.botonReportes.UseVisualStyleBackColor = true;
             this.botonReportes.Click += new System.EventHandler(this.botonReportes_Click);
             // 
             // botonUsuarios
             // 
             this.botonUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonUsuarios.Location = new System.Drawing.Point(395, 301);
+            this.botonUsuarios.Location = new System.Drawing.Point(332, 242);
             this.botonUsuarios.Name = "botonUsuarios";
             this.botonUsuarios.Size = new System.Drawing.Size(189, 61);
             this.botonUsuarios.TabIndex = 12;
@@ -120,7 +122,7 @@
             // botonProductos
             // 
             this.botonProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonProductos.Location = new System.Drawing.Point(657, 201);
+            this.botonProductos.Location = new System.Drawing.Point(666, 148);
             this.botonProductos.Name = "botonProductos";
             this.botonProductos.Size = new System.Drawing.Size(189, 61);
             this.botonProductos.TabIndex = 11;
@@ -134,11 +136,33 @@
             this.lblBienvenido.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenido.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblBienvenido.Location = new System.Drawing.Point(254, 70);
+            this.lblBienvenido.Location = new System.Drawing.Point(274, 9);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(443, 84);
             this.lblBienvenido.TabIndex = 10;
             this.lblBienvenido.Text = "BIENVENIDO";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(34, 350);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(189, 80);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Reporte Categoria";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(666, 342);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(189, 88);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Reporte Productos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -147,6 +171,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(974, 540);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.botonElaborados);
             this.Controls.Add(this.botonCategorias);
             this.Controls.Add(this.btnCompras);
@@ -176,5 +202,7 @@
         private System.Windows.Forms.Button botonUsuarios;
         private System.Windows.Forms.Button botonProductos;
         private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

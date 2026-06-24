@@ -88,5 +88,21 @@ namespace PESCADOFINAL.VISTA
             if (FrmAutentificacion.usuarioRol == "CAJERO")
                 botonUsuarios.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmReporteCategoria reportes = new FrmReporteCategoria();
+            reportes.Show();
+
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmReporteProducto reportes = new FrmReporteProducto();
+            reportes.Show();
+
+            this.Hide();
+        }
     }
 }

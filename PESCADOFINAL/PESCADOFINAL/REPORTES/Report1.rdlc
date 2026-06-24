@@ -767,32 +767,32 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!SUBTOTAL.Value</GroupExpression>
+                      <GroupExpression>=Fields!PRODUCTO.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!SUBTOTAL.Value</Value>
+                      <Value>=Fields!PRODUCTO.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!SUBTOTAL.Value</Label>
+                  <Label>=Fields!PRODUCTO.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>PRODUCTO</Label>
+                  <Label>SUBTOTAL</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="PRODUCTO">
+                <ChartSeries Name="SUBTOTAL">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!PRODUCTO.Value)</Y>
+                        <Y>=Sum(Fields!SUBTOTAL.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
