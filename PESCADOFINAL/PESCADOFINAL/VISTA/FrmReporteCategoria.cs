@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Reporting.WinForms;
 namespace PESCADOFINAL.VISTA
 {
     public partial class FrmReporteCategoria : Form
@@ -17,18 +17,15 @@ namespace PESCADOFINAL.VISTA
             InitializeComponent();
         }
 
-        private void FrmReporteCategoria_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'pezFinalDataSet2.ESTADISTICA_INGRESOS_CATEGORIA' Puede moverla o quitarla según sea necesario.
-            this.eSTADISTICA_INGRESOS_CATEGORIATableAdapter.Fill(this.pezFinalDataSet2.ESTADISTICA_INGRESOS_CATEGORIA);
-            // TODO: esta línea de código carga datos en la tabla 'pezFinalDataSet2.ESTADISTICA_PRODUCTOS_MAS_VENDIDOS' Puede moverla o quitarla según sea necesario.
-            this.eSTADISTICA_PRODUCTOS_MAS_VENDIDOSTableAdapter.Fill(this.pezFinalDataSet2.ESTADISTICA_PRODUCTOS_MAS_VENDIDOS);
+		private void FrmReporteCategoria_Load(object sender, EventArgs e)
+		{
+			this.eSTADISTICA_INGRESOS_CATEGORIATableAdapter.Fill(
+		this.pezFinalDataSet2.ESTADISTICA_INGRESOS_CATEGORIA);
 
-            this.reportViewer1.RefreshReport();
-           
-        }
+			this.reportViewer1.RefreshReport();
+		}
 
-        private void button1_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
         {
             FrmMenuPrincipal menu = new FrmMenuPrincipal();
             menu.Show();

@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\proyectojoel\\vista\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|solutionrelative:proyectojoel\\vista\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\proyectojoel\\proyectojoel\\reportes\\reciboventa.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|solutionrelative:proyectojoel\\reportes\\reciboventa.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\proyectojoel\\proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\proyectojoel\\vista\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|solutionrelative:proyectojoel\\vista\\login\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|solutionrelative:proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|c:\\users\\asus\\documents\\github\\proyecto-joel\\proyectojoel\\proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EAA6C587-3983-4A95-8FA5-86B350C2ECB3}|ProyectoJoel\\ProyectoJoel.csproj|solutionrelative:proyectojoel\\vista\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,11 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "RelativeToolTip": "ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAawCYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T18:47:41.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FrmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "ProyectoJoel\\Vista\\Login\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\Login\\FrmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoJoel\\Vista\\Login\\FrmLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T18:47:40.534Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ReciboVenta.rdlc [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Reportes\\ReciboVenta.rdlc",
               "RelativeDocumentMoniker": "ProyectoJoel\\Reportes\\ReciboVenta.rdlc",
@@ -38,28 +71,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FrmVenta.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\FrmVenta.cs",
               "RelativeDocumentMoniker": "ProyectoJoel\\Vista\\FrmVenta.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\FrmVenta.cs",
               "RelativeToolTip": "ProyectoJoel\\Vista\\FrmVenta.cs",
-              "ViewState": "AgIAAGMBAAAAAAAAAAAgwIUBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACYBAAAAAAAAAAAQwDwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T15:41:14.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-24T15:41:14.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FrmVenta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\FrmVenta.cs",
               "RelativeDocumentMoniker": "ProyectoJoel\\Vista\\FrmVenta.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GitHub\\Proyecto-joel\\ProyectoJoel\\ProyectoJoel\\Vista\\FrmVenta.cs [Dise\u00F1o]",
               "RelativeToolTip": "ProyectoJoel\\Vista\\FrmVenta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T15:41:13.387Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-06-24T15:41:13.387Z"
             }
           ]
         }

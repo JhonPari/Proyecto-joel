@@ -334,3 +334,4 @@ C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOF.304BA345.Up2Date
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.exe
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.pdb
+C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.exe.config

@@ -59,10 +59,18 @@
 			// 
 			this.pezFinalDataSet2.DataSetName = "PezFinalDataSet2";
 			this.pezFinalDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 =
+			new Microsoft.Reporting.WinForms.ReportDataSource();
+
+			reportDataSource1.Name = "DSReporteCategoria";
+			reportDataSource1.Value = this.eSTADISTICAINGRESOSCATEGORIABindingSource;
 			// 
 			// reportViewer1
-			// 
+			//
+
+
 			this.reportViewer1.LocalReport.ReportEmbeddedResource = "PESCADOFINAL.REPORTES.ReporteCategoria.rdlc";
+			this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
 			this.reportViewer1.Location = new System.Drawing.Point(165, 10);
 			this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.reportViewer1.Name = "reportViewer1";

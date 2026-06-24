@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PezFinalDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PezFinalDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PezFinalDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VISTA\FrmAutentificacion.cs">
@@ -374,6 +379,17 @@
     </None>
     <None Include="PezFinalDataSet4.xss">
       <DependentUpon>PezFinalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet5.xsc">
+      <DependentUpon>PezFinalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PezFinalDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PezFinalDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PezFinalDataSet5.xss">
+      <DependentUpon>PezFinalDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
