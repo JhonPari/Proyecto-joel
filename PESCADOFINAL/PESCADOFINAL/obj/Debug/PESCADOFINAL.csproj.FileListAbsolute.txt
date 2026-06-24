@@ -334,3 +334,4 @@ C:\Users\laura\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debu
 C:\Users\laura\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.VISTA.FrmReporteProducto.resources
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.VISTA.FrmReporteCategoria.resources
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.VISTA.FrmReporteProducto.resources
+C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.VISTA.frmHistorialVentas.resources

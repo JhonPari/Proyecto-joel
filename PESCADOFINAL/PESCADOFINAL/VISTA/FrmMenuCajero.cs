@@ -37,5 +37,12 @@ namespace PESCADOFINAL.VISTA
                 this.Close();
             }
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			frmHistorialVentas login = new frmHistorialVentas();
+			login.Show();
+			this.Close();
+		}
+	}
 }

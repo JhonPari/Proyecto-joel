@@ -415,5 +415,100 @@ namespace PESCADOFINAL.MODELO
 
 			return dt;
 		}
+		public DataTable buscarClienteModelo(string dato)
+		{
+			DataTable dt = new DataTable();
+			SqlConnection c = ConexionBD.ObtenerConexion();
+
+			try
+			{
+				SqlCommand cmd = new SqlCommand("BUSCAR_CLIENTE", c);
+				cmd.CommandType = CommandType.StoredProcedure;
+
+				cmd.Parameters.Add(
+					new SqlParameter("@dato", SqlDbType.VarChar, 100)
+					{
+						Value = dato
+					});
+
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				if (c.State == ConnectionState.Open)
+					c.Close();
+			}
+
+			return dt;
+		}
+		public DataTable listarTodasVentasModelo()
+		{
+			DataTable dt = new DataTable();
+			SqlConnection c = ConexionBD.ObtenerConexion();
+
+			try
+			{
+				SqlCommand cmd = new SqlCommand("VENTA_LISTAR_TODAS", c);
+				cmd.CommandType = CommandType.StoredProcedure;
+
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				if (c.State == ConnectionState.Open)
+					c.Close();
+			}
+
+			return dt;
+		}
+
+		public DataTable historialVentasFechaModelo(DateTime inicio, DateTime fin)
+		{
+			DataTable dt = new DataTable();
+			SqlConnection c = ConexionBD.ObtenerConexion();
+
+			try
+			{
+				SqlCommand cmd = new SqlCommand("VENTA_HISTORIAL_FECHA", c);
+				cmd.CommandType = CommandType.StoredProcedure;
+
+				cmd.Parameters.Add(
+					new SqlParameter("@fechaInicio", SqlDbType.Date)
+					{
+						Value = inicio.Date
+					});
+
+				cmd.Parameters.Add(
+					new SqlParameter("@fechaFin", SqlDbType.Date)
+					{
+						Value = fin.Date
+					});
+
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			finally
+			{
+				if (c.State == ConnectionState.Open)
+					c.Close();
+			}
+
+			return dt;
+		}
+
 	}
 }

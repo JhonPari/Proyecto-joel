@@ -93,5 +93,21 @@ namespace PESCADOFINAL.CONTROLADOR
 			return new M_Venta()
 				.ingresosCategoriaModelo();
 		}
+		public static DataTable buscarCliente(string dato)
+		{
+			M_Venta obj = new M_Venta();
+			return obj.buscarClienteModelo(dato);
+		}
+		public static DataTable listarTodasVentas()
+		{
+			return new M_Venta()
+				.listarTodasVentasModelo();
+		}
+
+		public static DataTable historialVentasFecha(DateTime inicio, DateTime fin)
+		{
+			return new M_Venta()
+				.historialVentasFechaModelo(inicio, fin);
+		}
 	}
 }

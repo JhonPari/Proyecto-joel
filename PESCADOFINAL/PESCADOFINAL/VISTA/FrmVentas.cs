@@ -1,6 +1,11 @@
-﻿using PESCADOFINAL.CONTROLADOR;
+﻿using Microsoft.Reporting.WinForms;
+using PESCADOFINAL.Conexion;
+using PESCADOFINAL.CONTROLADOR;
+using PESCADOFINAL.MODELO;
 using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PESCADOFINAL.VISTA
@@ -12,7 +17,6 @@ namespace PESCADOFINAL.VISTA
 		private int filaSeleccionada = -1;
 		private decimal totalVenta = 0;
 
-		// Cambia este valor si usas usuario logueado
 		private int usuarioCodigo = 1;
 
 		public FrmVentas()
@@ -104,13 +108,9 @@ namespace PESCADOFINAL.VISTA
 			DataView dv = dtProductos.DefaultView;
 
 			if (dtProductos.Columns.Contains("CAT_CODIGO"))
-			{
 				dv.RowFilter = "CAT_CODIGO = " + categoriaCodigo;
-			}
 			else
-			{
 				dv.RowFilter = "";
-			}
 
 			cmbProducto.DataSource = dv;
 			cmbProducto.DisplayMember = "PLATO";
@@ -134,20 +134,12 @@ namespace PESCADOFINAL.VISTA
 				cmbProducto.SelectedItem is DataRowView fila)
 			{
 				if (fila.Row.Table.Columns.Contains("PRECIO"))
-				{
-					txtPrecioUnit.Text =
-						fila["PRECIO"].ToString();
-				}
+					txtPrecioUnit.Text = fila["PRECIO"].ToString();
 
 				if (fila.Row.Table.Columns.Contains("STOCK_DISP"))
-				{
-					lblStockDisp.Text =
-						"Stock: " + fila["STOCK_DISP"].ToString();
-				}
+					lblStockDisp.Text = "Stock: " + fila["STOCK_DISP"].ToString();
 				else
-				{
 					lblStockDisp.Text = "Stock: -";
-				}
 			}
 			else
 			{
@@ -164,16 +156,14 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) ||
-				cantidad <= 0)
+			if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
 			{
 				MessageBox.Show("Cantidad invalida.");
 				txtCantidad.Focus();
 				return;
 			}
 
-			if (!decimal.TryParse(txtPrecioUnit.Text.Trim(), out decimal precio) ||
-				precio <= 0)
+			if (!decimal.TryParse(txtPrecioUnit.Text.Trim(), out decimal precio) || precio <= 0)
 			{
 				MessageBox.Show("Precio invalido.");
 				return;
@@ -187,9 +177,7 @@ namespace PESCADOFINAL.VISTA
 			decimal stockDisponible = 0;
 
 			if (filaProducto.Row.Table.Columns.Contains("STOCK_DISP"))
-			{
 				stockDisponible = Convert.ToDecimal(filaProducto["STOCK_DISP"]);
-			}
 
 			if (cantidad > stockDisponible)
 			{
@@ -199,12 +187,7 @@ namespace PESCADOFINAL.VISTA
 
 			decimal subtotal = cantidad * precio;
 
-			dgvDetalle.Rows.Add(
-				pelCod,
-				producto,
-				cantidad,
-				precio,
-				subtotal);
+			dgvDetalle.Rows.Add(pelCod, producto, cantidad, precio, subtotal);
 
 			calcularTotal();
 			limpiarLinea();
@@ -224,16 +207,14 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) ||
-				cantidad <= 0)
+			if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
 			{
 				MessageBox.Show("Cantidad invalida.");
 				txtCantidad.Focus();
 				return;
 			}
 
-			if (!decimal.TryParse(txtPrecioUnit.Text.Trim(), out decimal precio) ||
-				precio <= 0)
+			if (!decimal.TryParse(txtPrecioUnit.Text.Trim(), out decimal precio) || precio <= 0)
 			{
 				MessageBox.Show("Precio invalido.");
 				return;
@@ -247,9 +228,7 @@ namespace PESCADOFINAL.VISTA
 			decimal stockDisponible = 0;
 
 			if (filaProducto.Row.Table.Columns.Contains("STOCK_DISP"))
-			{
 				stockDisponible = Convert.ToDecimal(filaProducto["STOCK_DISP"]);
-			}
 
 			if (cantidad > stockDisponible)
 			{
@@ -296,9 +275,7 @@ namespace PESCADOFINAL.VISTA
 
 			if (fila.Cells["PEL_COD"].Value == null ||
 				fila.Cells["PEL_COD"].Value == DBNull.Value)
-			{
 				return;
-			}
 
 			filaSeleccionada = e.RowIndex;
 
@@ -318,8 +295,7 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (!decimal.TryParse(txtMonto.Text.Trim(), out decimal monto) ||
-				monto <= 0)
+			if (!decimal.TryParse(txtMonto.Text.Trim(), out decimal monto) || monto <= 0)
 			{
 				MessageBox.Show("Ingrese el monto recibido.");
 				txtMonto.Focus();
@@ -355,8 +331,7 @@ namespace PESCADOFINAL.VISTA
 				return;
 			}
 
-			if (!decimal.TryParse(txtMonto.Text.Trim(), out decimal monto) ||
-				monto <= 0)
+			if (!decimal.TryParse(txtMonto.Text.Trim(), out decimal monto) || monto <= 0)
 			{
 				MessageBox.Show("Ingrese el monto recibido.");
 				txtMonto.Focus();
@@ -422,8 +397,87 @@ namespace PESCADOFINAL.VISTA
 				cambio.ToString("N2"),
 				"EXITO");
 
+			generarReciboPDF(venCod);
+
 			limpiarTodo();
 			cargarProductos();
+		}
+
+		private DataTable cargarReciboVenta(int venCod)
+		{
+			DataTable dt = new DataTable();
+			SqlConnection c = ConexionBD.ObtenerConexion();
+
+			try
+			{
+				SqlCommand cmd = new SqlCommand("RECIBO_VENTA", c);
+				cmd.CommandType = CommandType.StoredProcedure;
+
+				cmd.Parameters.Add(
+					new SqlParameter("@codigo", SqlDbType.Int)
+					{
+						Value = venCod
+					});
+
+				SqlDataAdapter da = new SqlDataAdapter(cmd);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error al cargar recibo: " + ex.Message);
+			}
+			finally
+			{
+				if (c.State == ConnectionState.Open)
+					c.Close();
+			}
+
+			return dt;
+		}
+
+		private void generarReciboPDF(int venCod)
+		{
+			DataTable dt = cargarReciboVenta(venCod);
+
+			if (dt.Rows.Count == 0)
+			{
+				MessageBox.Show("No se encontraron datos para el recibo.");
+				return;
+			}
+
+			LocalReport reporte = new LocalReport();
+
+			reporte.ReportEmbeddedResource =
+				"PESCADOFINAL.REPORTES.ReciboVentas.rdlc";
+
+			reporte.DataSources.Clear();
+
+			reporte.DataSources.Add(
+				new ReportDataSource("DSReciboVenta", dt));
+
+			try
+			{
+				byte[] pdf = reporte.Render("WORDOPENXML");
+
+				SaveFileDialog guardar = new SaveFileDialog();
+				guardar.Filter = "Archivo PDF|*.pdf";
+				guardar.Filter = "Archivo Word|*.docx";
+				guardar.FileName = "Recibo_Venta_" + venCod + ".docx";
+
+				if (guardar.ShowDialog() == DialogResult.OK)
+				{
+					File.WriteAllBytes(guardar.FileName, pdf);
+					MessageBox.Show("Recibo generado correctamente.");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(
+					"Error al generar recibo:\n" +
+					ex.Message + "\n\n" +
+					"Detalle:\n" +
+					ex.InnerException?.Message);
+			}
 		}
 
 		private void btnNuevo_Click(object sender, EventArgs e)
@@ -523,7 +577,27 @@ namespace PESCADOFINAL.VISTA
 
 		private void txtMonto_TextChanged(object sender, EventArgs e)
 		{
+			calcularCambioAutomatico();
+		}
 
+		private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
+		{
+			string texto = txtBuscarCliente.Text.Trim();
+
+			if (texto == "")
+			{
+				txtCliente.Clear();
+				txtNit.Clear();
+				return;
+			}
+
+			DataTable dt = C_Venta.buscarCliente(texto);
+
+			if (dt.Rows.Count > 0)
+			{
+				txtCliente.Text = dt.Rows[0]["VENTA_CLIENTE"].ToString();
+				txtNit.Text = dt.Rows[0]["VENTA_NIT"].ToString();
+			}
 		}
 	}
 }
