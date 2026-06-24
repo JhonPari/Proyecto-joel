@@ -8,6 +8,7 @@ namespace PESCADOFINAL.VISTA
 	public partial class FrmCompras : Form
 	{
 		private DataTable dtProductos;
+		private string rutaImagen = "";
 
 		public FrmCompras()
 		{
@@ -249,7 +250,8 @@ namespace PESCADOFINAL.VISTA
 					Convert.ToInt32(cmbCategoria.SelectedValue),
 					txtProducto.Text.Trim(),
 					txtTamano.Text.Trim(),
-					0);
+					0,
+					rutaImagen);
 
 				if (prdCod <= 0)
 				{

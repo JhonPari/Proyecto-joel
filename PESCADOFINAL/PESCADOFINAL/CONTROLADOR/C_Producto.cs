@@ -14,28 +14,31 @@ namespace PESCADOFINAL.CONTROLADOR
 			int catCodigo,
 			string nombre,
 			string tamano,
-			decimal precioCosto)
+			decimal precioCosto,
+			string imagen)
 		{
 			return new M_Producto().registrarModelo(
 				catCodigo,
 				nombre,
 				tamano,
-				precioCosto);
+				precioCosto,
+				imagen);
 		}
-
 		public static int editar(
 			int codigo,
 			int catCodigo,
 			string nombre,
 			string tamano,
-			decimal precioCosto)
+			decimal precioCosto,
+			string imagen)
 		{
 			return new M_Producto().editarModelo(
 				codigo,
 				catCodigo,
 				nombre,
 				tamano,
-				precioCosto);
+				precioCosto,
+				imagen);
 		}
 
 		public static int eliminar(int codigo)

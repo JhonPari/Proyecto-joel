@@ -1,12 +1,14 @@
 ﻿using PESCADOFINAL.CONTROLADOR;
 using System;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PESCADOFINAL.VISTA
 {
 	public partial class FrmProducto : Form
 	{
 		private int codigoSeleccionado = 0;
+		private string rutaImagen = "";
 
 		public FrmProducto()
 		{
@@ -73,6 +75,18 @@ namespace PESCADOFINAL.VISTA
 			cmbCategoria.SelectedValue =
 				f.Cells["CATEGORIA_CODIGO"].Value;
 
+			rutaImagen = f.Cells["IMAGEN"].Value?.ToString() ?? "";
+
+			if (File.Exists(rutaImagen))
+			{
+				pbImagen.ImageLocation = rutaImagen;
+				pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
+			}
+			else
+			{
+				pbImagen.Image = null;
+			}
+
 			botonGuardar.Enabled = false;
 			btnEditar.Enabled = true;
 			botonEliminar.Enabled = true;
@@ -95,7 +109,7 @@ namespace PESCADOFINAL.VISTA
 					Convert.ToInt32(cmbCategoria.SelectedValue),
 					txtNombre.Text.Trim(),
 					txtTamano.Text.Trim(),
-					Convert.ToDecimal(txtPrecioCosto.Text));
+					Convert.ToDecimal(txtPrecioCosto.Text),rutaImagen);
 
 			if (resultado > 0)
 			{
@@ -213,7 +227,7 @@ namespace PESCADOFINAL.VISTA
 					Convert.ToInt32(cmbCategoria.SelectedValue),
 					txtNombre.Text.Trim(),
 					txtTamano.Text.Trim(),
-					Convert.ToDecimal(txtPrecioCosto.Text));
+					Convert.ToDecimal(txtPrecioCosto.Text),rutaImagen);
 
 			if (resultado > 0)
 			{
@@ -262,6 +276,8 @@ namespace PESCADOFINAL.VISTA
 			txtTamano.Clear();
 			txtPrecioCosto.Clear();
 			cmbCategoria.SelectedIndex = -1;
+			rutaImagen = "";
+			pbImagen.Image = null;
 
 			txtNombre.Focus();
 		}
@@ -272,5 +288,35 @@ namespace PESCADOFINAL.VISTA
 			btnEditar.Enabled = false;
 			botonEliminar.Enabled = false;
 		}
+
+
+private void btnImagen_Click(object sender, EventArgs e)
+{
+	OpenFileDialog abrir = new OpenFileDialog();
+	abrir.Filter = "Imagenes|*.jpg;*.jpeg;*.png;*.bmp";
+
+	if (abrir.ShowDialog() == DialogResult.OK)
+	{
+		string carpeta = Application.StartupPath + @"\Imagenes\";
+
+		if (!Directory.Exists(carpeta))
+		{
+			Directory.CreateDirectory(carpeta);
+		}
+
+		string nombreArchivo =
+			Guid.NewGuid().ToString() +
+			Path.GetExtension(abrir.FileName);
+
+		string destino = Path.Combine(carpeta, nombreArchivo);
+
+		File.Copy(abrir.FileName, destino, true);
+
+		rutaImagen = destino;
+
+		pbImagen.ImageLocation = destino;
+		pbImagen.SizeMode = PictureBoxSizeMode.StretchImage;
+	}
+}
 	}
 }

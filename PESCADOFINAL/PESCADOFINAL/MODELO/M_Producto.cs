@@ -14,6 +14,7 @@ namespace PESCADOFINAL.MODELO
 		public string tamano { get; set; }
 		public decimal precioCosto { get; set; }
 		public decimal stock { get; set; }
+		public string imagen { get; set; }
 
 		public M_Producto() { }
 
@@ -48,7 +49,7 @@ namespace PESCADOFINAL.MODELO
 			return r;
 		}
 
-		public int registrarModelo(int catCodigo, string nombre, string tamano, decimal precioCosto)
+		public int registrarModelo(int catCodigo, string nombre, string tamano, decimal precioCosto, string imagen)
 		{
 			int r = 0;
 			SqlConnection c = ConexionBD.ObtenerConexion();
@@ -62,6 +63,7 @@ namespace PESCADOFINAL.MODELO
 				cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.VarChar, 80) { Value = nombre });
 				cmd.Parameters.Add(new SqlParameter("@tamano", SqlDbType.VarChar, 40) { Value = (object)tamano ?? DBNull.Value });
 				cmd.Parameters.Add(new SqlParameter("@precioCosto", SqlDbType.Decimal) { Value = precioCosto });
+				cmd.Parameters.Add(new SqlParameter("@imagen", SqlDbType.VarChar, 255) { Value = (object)imagen ?? DBNull.Value });
 
 				r = cmd.ExecuteNonQuery();
 			}
@@ -78,7 +80,7 @@ namespace PESCADOFINAL.MODELO
 			return r;
 		}
 
-		public int editarModelo(int codigo, int catCodigo, string nombre, string tamano, decimal precioCosto)
+		public int editarModelo(int codigo, int catCodigo, string nombre, string tamano, decimal precioCosto, string imagen)
 		{
 			int r = 0;
 			SqlConnection c = ConexionBD.ObtenerConexion();
@@ -93,6 +95,7 @@ namespace PESCADOFINAL.MODELO
 				cmd.Parameters.Add(new SqlParameter("@nombre", SqlDbType.VarChar, 80) { Value = nombre });
 				cmd.Parameters.Add(new SqlParameter("@tamano", SqlDbType.VarChar, 40) { Value = (object)tamano ?? DBNull.Value });
 				cmd.Parameters.Add(new SqlParameter("@precioCosto", SqlDbType.Decimal) { Value = precioCosto });
+				cmd.Parameters.Add(new SqlParameter("@imagen", SqlDbType.VarChar, 255) { Value = (object)imagen ?? DBNull.Value });
 
 				r = cmd.ExecuteNonQuery();
 			}

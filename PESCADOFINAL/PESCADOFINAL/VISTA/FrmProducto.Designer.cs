@@ -45,14 +45,19 @@
 			this.botonEliminar = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.dgvProductos = new System.Windows.Forms.DataGridView();
+			this.pbImagen = new System.Windows.Forms.PictureBox();
+			this.btnImagen = new System.Windows.Forms.Button();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox2
 			// 
 			this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+			this.groupBox2.Controls.Add(this.btnImagen);
+			this.groupBox2.Controls.Add(this.pbImagen);
 			this.groupBox2.Controls.Add(this.label4);
 			this.groupBox2.Controls.Add(this.cmbCategoria);
 			this.groupBox2.Controls.Add(this.label1);
@@ -62,11 +67,11 @@
 			this.groupBox2.Controls.Add(this.label3);
 			this.groupBox2.Controls.Add(this.txtPrecioCosto);
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox2.Location = new System.Drawing.Point(513, 54);
+			this.groupBox2.Location = new System.Drawing.Point(634, 29);
 			this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.groupBox2.Size = new System.Drawing.Size(354, 276);
+			this.groupBox2.Size = new System.Drawing.Size(393, 402);
 			this.groupBox2.TabIndex = 46;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "DATOS PRODUCTO";
@@ -88,7 +93,7 @@
 			this.cmbCategoria.Location = new System.Drawing.Point(9, 82);
 			this.cmbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.cmbCategoria.Name = "cmbCategoria";
-			this.cmbCategoria.Size = new System.Drawing.Size(293, 26);
+			this.cmbCategoria.Size = new System.Drawing.Size(172, 26);
 			this.cmbCategoria.TabIndex = 40;
 			// 
 			// label1
@@ -121,7 +126,7 @@
 			this.txtTamano.Location = new System.Drawing.Point(9, 190);
 			this.txtTamano.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtTamano.Name = "txtTamano";
-			this.txtTamano.Size = new System.Drawing.Size(294, 24);
+			this.txtTamano.Size = new System.Drawing.Size(173, 24);
 			this.txtTamano.TabIndex = 38;
 			this.txtTamano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTamano_KeyPress);
 			// 
@@ -132,7 +137,7 @@
 			this.txtNombre.Location = new System.Drawing.Point(9, 136);
 			this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtNombre.Name = "txtNombre";
-			this.txtNombre.Size = new System.Drawing.Size(293, 24);
+			this.txtNombre.Size = new System.Drawing.Size(172, 24);
 			this.txtNombre.TabIndex = 22;
 			this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
 			// 
@@ -155,7 +160,7 @@
 			this.txtPrecioCosto.Location = new System.Drawing.Point(9, 244);
 			this.txtPrecioCosto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtPrecioCosto.Name = "txtPrecioCosto";
-			this.txtPrecioCosto.Size = new System.Drawing.Size(294, 24);
+			this.txtPrecioCosto.Size = new System.Drawing.Size(173, 24);
 			this.txtPrecioCosto.TabIndex = 24;
 			this.txtPrecioCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
 			// 
@@ -223,7 +228,7 @@
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox1.Location = new System.Drawing.Point(11, 10);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(497, 170);
+			this.groupBox1.Size = new System.Drawing.Size(617, 209);
 			this.groupBox1.TabIndex = 40;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "LISTADO DE DATOS";
@@ -236,9 +241,27 @@
 			this.dgvProductos.Name = "dgvProductos";
 			this.dgvProductos.RowHeadersWidth = 62;
 			this.dgvProductos.RowTemplate.Height = 28;
-			this.dgvProductos.Size = new System.Drawing.Size(491, 148);
+			this.dgvProductos.Size = new System.Drawing.Size(611, 187);
 			this.dgvProductos.TabIndex = 0;
 			this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+			// 
+			// pbImagen
+			// 
+			this.pbImagen.Location = new System.Drawing.Point(222, 36);
+			this.pbImagen.Name = "pbImagen";
+			this.pbImagen.Size = new System.Drawing.Size(144, 136);
+			this.pbImagen.TabIndex = 42;
+			this.pbImagen.TabStop = false;
+			// 
+			// btnImagen
+			// 
+			this.btnImagen.Location = new System.Drawing.Point(222, 190);
+			this.btnImagen.Name = "btnImagen";
+			this.btnImagen.Size = new System.Drawing.Size(144, 37);
+			this.btnImagen.TabIndex = 43;
+			this.btnImagen.Text = "Imagen";
+			this.btnImagen.UseVisualStyleBackColor = true;
+			this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
 			// 
 			// FrmProducto
 			// 
@@ -246,7 +269,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ClientSize = new System.Drawing.Size(866, 432);
+			this.ClientSize = new System.Drawing.Size(1039, 432);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.btnEditar);
 			this.Controls.Add(this.btnVolver);
@@ -263,6 +286,7 @@
 			this.groupBox2.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -285,5 +309,7 @@
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvProductos;
-    }
+		private System.Windows.Forms.Button btnImagen;
+		private System.Windows.Forms.PictureBox pbImagen;
+	}
 }
