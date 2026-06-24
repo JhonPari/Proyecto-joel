@@ -1,7 +1,8 @@
 ﻿using ProyectoJoel.Controlador;
 using System;
-using System.IO;
+using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoJoel.Vista
@@ -433,6 +434,34 @@ namespace ProyectoJoel.Vista
 				pbImagen.SizeMode =
 					PictureBoxSizeMode.StretchImage;
 			}
+		}
+		private void BuscarProducto()
+		{
+			string texto = txtProductos.Text.Trim();
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				ListarProductos();
+				return;
+			}
+
+			DataTable tabla = C_Producto.ListarProductoControlador();
+
+			DataView vista = tabla.DefaultView;
+
+			vista.RowFilter =
+				$"Nombre LIKE '%{texto}%' OR " +
+				$"Marca LIKE '%{texto}%' OR " +
+				$"Color LIKE '%{texto}%' OR " +
+				$"Convert(Talla, 'System.String') LIKE '%{texto}%' OR " +
+				$"Convert(Precio, 'System.String') LIKE '%{texto}%' OR " +
+				$"Convert(Stock, 'System.String') LIKE '%{texto}%'";
+
+			dgvProductos.DataSource = vista;
+		}
+		private void txtProductos_TextChanged(object sender, EventArgs e)
+		{
+			BuscarProducto();
 		}
 	}
 }

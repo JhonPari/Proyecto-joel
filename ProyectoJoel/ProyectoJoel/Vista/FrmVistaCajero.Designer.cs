@@ -48,7 +48,7 @@
 			// 
 			// btnVentaCajero
 			// 
-			this.btnVentaCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnVentaCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnVentaCajero.Location = new System.Drawing.Point(21, 76);
 			this.btnVentaCajero.Name = "btnVentaCajero";
 			this.btnVentaCajero.Size = new System.Drawing.Size(266, 62);
@@ -59,7 +59,7 @@
 			// 
 			// btnRegistraClienteCajero
 			// 
-			this.btnRegistraClienteCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnRegistraClienteCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnRegistraClienteCajero.Location = new System.Drawing.Point(21, 163);
 			this.btnRegistraClienteCajero.Name = "btnRegistraClienteCajero";
 			this.btnRegistraClienteCajero.Size = new System.Drawing.Size(266, 62);
@@ -94,7 +94,7 @@
 			// 
 			// btnHistorial
 			// 
-			this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnHistorial.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
 			this.btnHistorial.Location = new System.Drawing.Point(21, 258);
 			this.btnHistorial.Name = "btnHistorial";
@@ -106,7 +106,7 @@
 			// 
 			// pictureBox3
 			// 
-			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
 			this.pictureBox3.Location = new System.Drawing.Point(30, 85);
 			this.pictureBox3.Name = "pictureBox3";
@@ -117,7 +117,7 @@
 			// 
 			// pictureBox9
 			// 
-			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
 			this.pictureBox9.Location = new System.Drawing.Point(30, 267);
 			this.pictureBox9.Name = "pictureBox9";
@@ -128,7 +128,7 @@
 			// 
 			// pictureBox6
 			// 
-			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
 			this.pictureBox6.Location = new System.Drawing.Point(30, 172);
 			this.pictureBox6.Name = "pictureBox6";
@@ -141,7 +141,7 @@
 			// 
 			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-			this.pictureBox2.Location = new System.Drawing.Point(300, 76);
+			this.pictureBox2.Location = new System.Drawing.Point(383, 76);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(285, 241);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

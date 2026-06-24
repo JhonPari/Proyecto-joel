@@ -45,6 +45,7 @@
 			// 
 			this.lblUsuario.AutoSize = true;
 			this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblUsuario.ForeColor = System.Drawing.Color.White;
 			this.lblUsuario.Location = new System.Drawing.Point(104, 163);
 			this.lblUsuario.Name = "lblUsuario";
 			this.lblUsuario.Size = new System.Drawing.Size(171, 20);
@@ -55,6 +56,7 @@
 			// 
 			this.lblContrasena.AutoSize = true;
 			this.lblContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblContrasena.ForeColor = System.Drawing.Color.White;
 			this.lblContrasena.Location = new System.Drawing.Point(104, 229);
 			this.lblContrasena.Name = "lblContrasena";
 			this.lblContrasena.Size = new System.Drawing.Size(105, 20);
@@ -77,7 +79,7 @@
 			// 
 			// btnIngresar
 			// 
-			this.btnIngresar.BackColor = System.Drawing.Color.YellowGreen;
+			this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnIngresar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
 			this.btnIngresar.Location = new System.Drawing.Point(149, 296);
 			this.btnIngresar.Name = "btnIngresar";
@@ -90,9 +92,9 @@
 			// label1
 			// 
 			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.label1.Location = new System.Drawing.Point(-38, -7);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(569, 69);
@@ -102,6 +104,7 @@
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(46, 135);
 			this.pictureBox1.Name = "pictureBox1";
@@ -112,6 +115,7 @@
 			// 
 			// pictureBox2
 			// 
+			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
 			this.pictureBox2.Location = new System.Drawing.Point(46, 199);
 			this.pictureBox2.Name = "pictureBox2";
@@ -124,7 +128,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(528, 489);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox1);

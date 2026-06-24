@@ -41,6 +41,8 @@
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -49,6 +51,7 @@
 			// 
 			this.lblNombre.AutoSize = true;
 			this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblNombre.ForeColor = System.Drawing.Color.White;
 			this.lblNombre.Location = new System.Drawing.Point(27, 84);
 			this.lblNombre.Name = "lblNombre";
 			this.lblNombre.Size = new System.Drawing.Size(171, 20);
@@ -59,6 +62,7 @@
 			// 
 			this.lblContraseña.AutoSize = true;
 			this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblContraseña.ForeColor = System.Drawing.Color.White;
 			this.lblContraseña.Location = new System.Drawing.Point(27, 132);
 			this.lblContraseña.Name = "lblContraseña";
 			this.lblContraseña.Size = new System.Drawing.Size(105, 20);
@@ -69,6 +73,7 @@
 			// 
 			this.lblRol.AutoSize = true;
 			this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblRol.ForeColor = System.Drawing.Color.White;
 			this.lblRol.Location = new System.Drawing.Point(27, 181);
 			this.lblRol.Name = "lblRol";
 			this.lblRol.Size = new System.Drawing.Size(37, 20);
@@ -110,46 +115,46 @@
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.BackColor = System.Drawing.Color.YellowGreen;
+			this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.btnGuardar.Location = new System.Drawing.Point(267, 377);
+			this.btnGuardar.Location = new System.Drawing.Point(67, 377);
 			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Size = new System.Drawing.Size(89, 37);
+			this.btnGuardar.Size = new System.Drawing.Size(161, 37);
 			this.btnGuardar.TabIndex = 7;
-			this.btnGuardar.Text = "Crear";
+			this.btnGuardar.Text = "Crear Usuario";
 			this.btnGuardar.UseVisualStyleBackColor = false;
 			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// btnEditar
 			// 
-			this.btnEditar.BackColor = System.Drawing.Color.Orange;
+			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.btnEditar.Location = new System.Drawing.Point(371, 377);
+			this.btnEditar.Location = new System.Drawing.Point(234, 377);
 			this.btnEditar.Name = "btnEditar";
-			this.btnEditar.Size = new System.Drawing.Size(89, 37);
+			this.btnEditar.Size = new System.Drawing.Size(174, 37);
 			this.btnEditar.TabIndex = 8;
-			this.btnEditar.Text = "Editar";
+			this.btnEditar.Text = "Editar Usuario";
 			this.btnEditar.UseVisualStyleBackColor = false;
 			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.BackColor = System.Drawing.Color.Red;
+			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.btnEliminar.Location = new System.Drawing.Point(468, 377);
+			this.btnEliminar.Location = new System.Drawing.Point(414, 377);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(89, 37);
+			this.btnEliminar.Size = new System.Drawing.Size(191, 37);
 			this.btnEliminar.TabIndex = 9;
-			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.Text = "Eliminar Usuario";
 			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
 			// 
 			// label1
 			// 
 			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.label1.Location = new System.Drawing.Point(-10, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(673, 58);
@@ -168,12 +173,33 @@
 			this.pictureBox1.TabIndex = 23;
 			this.pictureBox1.TabStop = false;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(464, 161);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(140, 20);
+			this.label2.TabIndex = 37;
+			this.label2.Text = "Buscar Usuario";
+			// 
+			// txtBuscarUsuario
+			// 
+			this.txtBuscarUsuario.Location = new System.Drawing.Point(464, 182);
+			this.txtBuscarUsuario.Name = "txtBuscarUsuario";
+			this.txtBuscarUsuario.Size = new System.Drawing.Size(158, 22);
+			this.txtBuscarUsuario.TabIndex = 36;
+			this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
+			// 
 			// FrmUsuarios
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(655, 450);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.txtBuscarUsuario);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnEliminar);
@@ -212,5 +238,7 @@
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox txtBuscarUsuario;
 	}
 }

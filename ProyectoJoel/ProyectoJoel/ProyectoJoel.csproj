@@ -32,6 +32,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -102,6 +122,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TiendaZapatosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaZapatosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaZapatosDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmCategoria.cs">
       <SubType>Form</SubType>
@@ -193,6 +218,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\ReciboVenta.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteProducto.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteStock.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentas.rdlc" />
@@ -266,6 +292,17 @@
     </None>
     <None Include="TiendaZapatosDataSet1.xss">
       <DependentUpon>TiendaZapatosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaZapatosDataSet2.xsc">
+      <DependentUpon>TiendaZapatosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaZapatosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TiendaZapatosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TiendaZapatosDataSet2.xss">
+      <DependentUpon>TiendaZapatosDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

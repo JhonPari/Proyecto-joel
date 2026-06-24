@@ -51,6 +51,8 @@
 			this.pbImagen = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtProductos = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +62,7 @@
 			// 
 			this.lblNombre.AutoSize = true;
 			this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblNombre.ForeColor = System.Drawing.Color.White;
 			this.lblNombre.Location = new System.Drawing.Point(61, 122);
 			this.lblNombre.Name = "lblNombre";
 			this.lblNombre.Size = new System.Drawing.Size(74, 20);
@@ -70,6 +73,7 @@
 			// 
 			this.lblMarca.AutoSize = true;
 			this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblMarca.ForeColor = System.Drawing.Color.White;
 			this.lblMarca.Location = new System.Drawing.Point(61, 159);
 			this.lblMarca.Name = "lblMarca";
 			this.lblMarca.Size = new System.Drawing.Size(61, 20);
@@ -80,6 +84,7 @@
 			// 
 			this.lblTalla.AutoSize = true;
 			this.lblTalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblTalla.ForeColor = System.Drawing.Color.White;
 			this.lblTalla.Location = new System.Drawing.Point(61, 195);
 			this.lblTalla.Name = "lblTalla";
 			this.lblTalla.Size = new System.Drawing.Size(50, 20);
@@ -90,6 +95,7 @@
 			// 
 			this.lblColor.AutoSize = true;
 			this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblColor.ForeColor = System.Drawing.Color.White;
 			this.lblColor.Location = new System.Drawing.Point(61, 236);
 			this.lblColor.Name = "lblColor";
 			this.lblColor.Size = new System.Drawing.Size(54, 20);
@@ -100,6 +106,7 @@
 			// 
 			this.lblPrecio.AutoSize = true;
 			this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblPrecio.ForeColor = System.Drawing.Color.White;
 			this.lblPrecio.Location = new System.Drawing.Point(347, 122);
 			this.lblPrecio.Name = "lblPrecio";
 			this.lblPrecio.Size = new System.Drawing.Size(63, 20);
@@ -110,6 +117,7 @@
 			// 
 			this.lblStock.AutoSize = true;
 			this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblStock.ForeColor = System.Drawing.Color.White;
 			this.lblStock.Location = new System.Drawing.Point(347, 165);
 			this.lblStock.Name = "lblStock";
 			this.lblStock.Size = new System.Drawing.Size(56, 20);
@@ -120,6 +128,7 @@
 			// 
 			this.lblCategoria.AutoSize = true;
 			this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.lblCategoria.ForeColor = System.Drawing.Color.White;
 			this.lblCategoria.Location = new System.Drawing.Point(347, 200);
 			this.lblCategoria.Name = "lblCategoria";
 			this.lblCategoria.Size = new System.Drawing.Size(90, 20);
@@ -180,7 +189,7 @@
 			// 
 			this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvProductos.Location = new System.Drawing.Point(12, 276);
+			this.dgvProductos.Location = new System.Drawing.Point(13, 309);
 			this.dgvProductos.Name = "dgvProductos";
 			this.dgvProductos.RowHeadersWidth = 51;
 			this.dgvProductos.RowTemplate.Height = 24;
@@ -190,43 +199,43 @@
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.BackColor = System.Drawing.Color.YellowGreen;
+			this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.btnGuardar.Location = new System.Drawing.Point(408, 456);
+			this.btnGuardar.Location = new System.Drawing.Point(219, 465);
 			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Size = new System.Drawing.Size(91, 36);
+			this.btnGuardar.Size = new System.Drawing.Size(209, 48);
 			this.btnGuardar.TabIndex = 15;
-			this.btnGuardar.Text = "Crear";
+			this.btnGuardar.Text = "Crear Producto";
 			this.btnGuardar.UseVisualStyleBackColor = false;
 			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// bntEditar
 			// 
-			this.bntEditar.BackColor = System.Drawing.Color.Orange;
+			this.bntEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.bntEditar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.bntEditar.Location = new System.Drawing.Point(512, 456);
+			this.bntEditar.Location = new System.Drawing.Point(444, 465);
 			this.bntEditar.Name = "bntEditar";
-			this.bntEditar.Size = new System.Drawing.Size(91, 36);
+			this.bntEditar.Size = new System.Drawing.Size(206, 48);
 			this.bntEditar.TabIndex = 16;
-			this.bntEditar.Text = "Editar";
+			this.bntEditar.Text = "Editar Producto";
 			this.bntEditar.UseVisualStyleBackColor = false;
 			this.bntEditar.Click += new System.EventHandler(this.bntEditar_Click);
 			// 
 			// bntEliminar
 			// 
-			this.bntEliminar.BackColor = System.Drawing.Color.Red;
+			this.bntEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.bntEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-			this.bntEliminar.Location = new System.Drawing.Point(615, 456);
+			this.bntEliminar.Location = new System.Drawing.Point(656, 465);
 			this.bntEliminar.Name = "bntEliminar";
-			this.bntEliminar.Size = new System.Drawing.Size(91, 36);
+			this.bntEliminar.Size = new System.Drawing.Size(215, 48);
 			this.bntEliminar.TabIndex = 17;
-			this.bntEliminar.Text = "Eliminar";
+			this.bntEliminar.Text = "Eliminar Producto";
 			this.bntEliminar.UseVisualStyleBackColor = false;
 			this.bntEliminar.Click += new System.EventHandler(this.bntEliminar_Click);
 			// 
 			// btnImagen
 			// 
-			this.btnImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnImagen.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
 			this.btnImagen.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.btnImagen.Location = new System.Drawing.Point(624, 122);
@@ -239,6 +248,7 @@
 			// 
 			// pbImagen
 			// 
+			this.pbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
 			this.pbImagen.Location = new System.Drawing.Point(762, 126);
 			this.pbImagen.Name = "pbImagen";
 			this.pbImagen.Size = new System.Drawing.Size(202, 130);
@@ -248,10 +258,10 @@
 			// label1
 			// 
 			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label1.Location = new System.Drawing.Point(-8, -10);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
+			this.label1.Location = new System.Drawing.Point(-8, -3);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(1199, 65);
 			this.label1.TabIndex = 20;
@@ -269,12 +279,33 @@
 			this.pictureBox1.TabIndex = 23;
 			this.pictureBox1.TabStop = false;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(1001, 259);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(160, 20);
+			this.label2.TabIndex = 39;
+			this.label2.Text = "Buscar Productos";
+			// 
+			// txtProductos
+			// 
+			this.txtProductos.Location = new System.Drawing.Point(984, 280);
+			this.txtProductos.Name = "txtProductos";
+			this.txtProductos.Size = new System.Drawing.Size(175, 22);
+			this.txtProductos.TabIndex = 38;
+			this.txtProductos.TextChanged += new System.EventHandler(this.txtProductos_TextChanged);
+			// 
 			// FrmProducto
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.ClientSize = new System.Drawing.Size(1182, 525);
+			this.BackColor = System.Drawing.Color.Black;
+			this.ClientSize = new System.Drawing.Size(1182, 538);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.txtProductos);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pbImagen);
@@ -297,6 +328,7 @@
 			this.Controls.Add(this.lblTalla);
 			this.Controls.Add(this.lblMarca);
 			this.Controls.Add(this.lblNombre);
+			this.ForeColor = System.Drawing.Color.Black;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "FrmProducto";
@@ -334,5 +366,7 @@
 		private System.Windows.Forms.PictureBox pbImagen;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox txtProductos;
 	}
 }

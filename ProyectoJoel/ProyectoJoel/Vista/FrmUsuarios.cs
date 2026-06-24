@@ -246,5 +246,32 @@ namespace ProyectoJoel.Vista
 			{
 			}
 		}
+
+		private void BuscarUsuario()
+		{
+			string texto = txtBuscarUsuario.Text.Trim();
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				ListarUsuarios();
+				return;
+			}
+
+			DataTable tabla = C_Usuario.ListarUsuarioControlador();
+
+			DataView vista = tabla.DefaultView;
+
+			vista.RowFilter =
+				$"Usuario LIKE '%{texto}%' OR " +
+				$"Contrasena LIKE '%{texto}%' OR " +
+				$"Rol LIKE '%{texto}%'";
+
+			dgvUsuarios.DataSource = vista;
+		}
+
+		private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
+		{
+			BuscarUsuario();
+		}
 	}
 }

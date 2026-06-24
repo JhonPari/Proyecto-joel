@@ -282,5 +282,34 @@ namespace ProyectoJoel.Vista
 			{
 			}
 		}
+		private void BuscarClientes()
+		{
+			string texto = txtCliente.Text.Trim();
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				ListarClientes();
+				return;
+			}
+
+			DataTable tabla = C_Cliente.ListarClienteControlador();
+
+			DataView vista = tabla.DefaultView;
+
+			vista.RowFilter =
+				$"Nombre LIKE '%{texto}%' OR " +
+				$"Apellido LIKE '%{texto}%' OR " +
+				$"DNI LIKE '%{texto}%' OR " +
+				$"Telefono LIKE '%{texto}%'";
+
+			dgvClientes.DataSource = vista;
+		}
+
+
+
+		private void txtCliente_TextChanged(object sender, EventArgs e)
+		{
+			BuscarClientes();
+		}
 	}
 }

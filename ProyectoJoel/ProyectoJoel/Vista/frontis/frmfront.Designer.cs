@@ -47,9 +47,9 @@
 			// label1
 			// 
 			this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.label1.Location = new System.Drawing.Point(2, -10);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(1208, 104);
@@ -59,7 +59,7 @@
 			// 
 			// btnNosotros
 			// 
-			this.btnNosotros.BackColor = System.Drawing.Color.YellowGreen;
+			this.btnNosotros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnNosotros.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
 			this.btnNosotros.Location = new System.Drawing.Point(522, 97);
 			this.btnNosotros.Name = "btnNosotros";
@@ -71,7 +71,7 @@
 			// 
 			// btnIniciarsession
 			// 
-			this.btnIniciarsession.BackColor = System.Drawing.Color.Orange;
+			this.btnIniciarsession.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.btnIniciarsession.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
 			this.btnIniciarsession.Location = new System.Drawing.Point(1003, 12);
 			this.btnIniciarsession.Name = "btnIniciarsession";
@@ -84,7 +84,7 @@
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.Orange;
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.Location = new System.Drawing.Point(1013, 25);
 			this.pictureBox1.Name = "pictureBox1";
@@ -107,7 +107,7 @@
 			this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label3.BackColor = System.Drawing.Color.Transparent;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.Blue;
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.label3.Location = new System.Drawing.Point(542, 206);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(629, 178);
@@ -156,7 +156,7 @@
 			this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.label5.BackColor = System.Drawing.Color.Transparent;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.ForeColor = System.Drawing.Color.Blue;
+			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(162)))), ((int)(((byte)(39)))));
 			this.label5.Location = new System.Drawing.Point(90, 473);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(629, 278);
@@ -170,8 +170,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(1208, 754);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);

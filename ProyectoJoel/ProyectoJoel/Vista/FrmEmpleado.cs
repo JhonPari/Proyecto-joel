@@ -275,5 +275,32 @@ namespace ProyectoJoel.Vista
 			btnEditar.Enabled = true;
 			btnEliminar.Enabled = true;
 		}
+		private void BuscarEmpleado()
+		{
+			string texto = txtEmpelado.Text.Trim();
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				ListarEmpleados();
+				return;
+			}
+
+			DataTable tabla = C_Empleado.ListarEmpleadoControlador();
+
+			DataView vista = tabla.DefaultView;
+
+			vista.RowFilter =
+				$"Nombre LIKE '%{texto}%' OR " +
+				$"Apellido LIKE '%{texto}%' OR " +
+				$"Cargo LIKE '%{texto}%' OR " +
+				$"Telefono LIKE '%{texto}%' OR " +
+				$"Email LIKE '%{texto}%'";
+
+			dgvEmpleados.DataSource = vista;
+		}
+		private void txtEmpelado_TextChanged(object sender, EventArgs e)
+		{
+			BuscarEmpleado();
+		}
 	}
 }

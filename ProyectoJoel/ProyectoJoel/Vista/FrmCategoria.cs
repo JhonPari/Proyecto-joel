@@ -1,5 +1,6 @@
 ﻿using ProyectoJoel.Controlador;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ProyectoJoel.Vista
@@ -213,6 +214,33 @@ namespace ProyectoJoel.Vista
 					MessageBox.Show("Error al eliminar categoría");
 				}
 			}
+		}
+		private void BuscarCategoria()
+		{
+			string texto = txtCategoria.Text.Trim();
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				ListarCategorias();
+				return;
+			}
+
+			DataTable tabla = C_Categoria.ListarCategoriaControlador();
+
+			DataView vista = tabla.DefaultView;
+
+			vista.RowFilter =
+				$"Nombre LIKE '%{texto}%' OR " +
+				$"Descripcion LIKE '%{texto}%'";
+
+			dgvCategorias.DataSource = vista;
+		}
+
+
+
+		private void txtCategoria_TextChanged(object sender, EventArgs e)
+		{
+			BuscarCategoria();
 		}
 	}
 }

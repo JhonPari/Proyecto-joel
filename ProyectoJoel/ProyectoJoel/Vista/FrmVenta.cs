@@ -1,6 +1,10 @@
 ﻿using ProyectoJoel.Controlador;
+using ProyectoJoel.Data;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoJoel.Vista
@@ -9,11 +13,12 @@ namespace ProyectoJoel.Vista
 	{
 		private DataTable detalleVenta = new DataTable();
 		private decimal totalVenta = 0;
+		private DataTable tablaClientes = new DataTable();
+		private DataTable tablaEmpleados = new DataTable();
 
 		public FrmVenta()
 		{
 			InitializeComponent();
-
 			this.Load += FrmVenta_Load;
 		}
 
@@ -23,42 +28,87 @@ namespace ProyectoJoel.Vista
 			CargarEmpleados();
 			CargarProductos();
 
-			detalleVenta.Columns.Add("IdProducto");
-			detalleVenta.Columns.Add("Producto");
-			detalleVenta.Columns.Add("Precio");
-			detalleVenta.Columns.Add("Cantidad");
-			detalleVenta.Columns.Add("Subtotal");
+			if (detalleVenta.Columns.Count == 0)
+			{
+				detalleVenta.Columns.Add("IdProducto", typeof(int));
+				detalleVenta.Columns.Add("Producto", typeof(string));
+				detalleVenta.Columns.Add("Precio", typeof(decimal));
+				detalleVenta.Columns.Add("Cantidad", typeof(int));
+				detalleVenta.Columns.Add("Subtotal", typeof(decimal));
+			}
 
 			dgvDetalleVenta.DataSource = detalleVenta;
 
 			txtPrecio.ReadOnly = true;
 			txtTotal.ReadOnly = true;
+			txtTotal.Text = "0.00";
 		}
-
 		private void CargarClientes()
 		{
-			DataTable dt =
-				C_Cliente.ListarClienteControlador();
+			tablaClientes = C_Cliente.ListarClienteControlador();
 
-			cmbCliente.DataSource = dt;
+			cmbCliente.DataSource = tablaClientes;
 			cmbCliente.DisplayMember = "Nombre";
 			cmbCliente.ValueMember = "IdCliente";
 		}
 
 		private void CargarEmpleados()
 		{
-			DataTable dt =
-				C_Empleado.ListarEmpleadoControlador();
+			tablaEmpleados = C_Empleado.ListarEmpleadoControlador();
 
-			cmbEmpleado.DataSource = dt;
+			cmbEmpleado.DataSource = tablaEmpleados;
+			cmbEmpleado.DisplayMember = "Nombre";
+			cmbEmpleado.ValueMember = "IdEmpleado";
+		}
+		private void BuscarCliente()
+		{
+			string texto = txtCliente.Text.Trim();
+
+			DataView vista = tablaClientes.DefaultView;
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				vista.RowFilter = "";
+			}
+			else
+			{
+				vista.RowFilter =
+					$"Nombre LIKE '%{texto}%' OR " +
+					$"Apellido LIKE '%{texto}%' OR " +
+					$"DNI LIKE '%{texto}%'";
+			}
+
+			cmbCliente.DataSource = vista;
+			cmbCliente.DisplayMember = "Nombre";
+			cmbCliente.ValueMember = "IdCliente";
+		}
+
+		private void BuscarEmpleado()
+		{
+			string texto = txtEmpleado.Text.Trim();
+
+			DataView vista = tablaEmpleados.DefaultView;
+
+			if (string.IsNullOrWhiteSpace(texto))
+			{
+				vista.RowFilter = "";
+			}
+			else
+			{
+				vista.RowFilter =
+					$"Nombre LIKE '%{texto}%' OR " +
+					$"Apellido LIKE '%{texto}%' OR " +
+					$"DNI LIKE '%{texto}%'";
+			}
+
+			cmbEmpleado.DataSource = vista;
 			cmbEmpleado.DisplayMember = "Nombre";
 			cmbEmpleado.ValueMember = "IdEmpleado";
 		}
 
 		private void CargarProductos()
 		{
-			DataTable dt =
-				C_Producto.ListarProductoControlador();
+			DataTable dt = C_Producto.ListarProductoControlador();
 
 			cmbProducto.DataSource = dt;
 			cmbProducto.DisplayMember = "Nombre";
@@ -68,27 +118,18 @@ namespace ProyectoJoel.Vista
 			cmbProducto.SelectedIndexChanged += cmbProducto_SelectedIndexChanged;
 
 			if (dt.Rows.Count > 0)
-			{
 				txtPrecio.Text = dt.Rows[0]["Precio"].ToString();
-			}
 		}
 
 		private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			try
-			{
-				if (cmbProducto.SelectedItem == null)
-					return;
+			if (cmbProducto.SelectedItem == null)
+				return;
 
-				DataRowView fila =
-					(DataRowView)cmbProducto.SelectedItem;
+			DataRowView fila = (DataRowView)cmbProducto.SelectedItem;
 
-				txtPrecio.Text =
-					fila["Precio"].ToString();
-			}
-			catch
-			{
-			}
+			if (fila.Row.Table.Columns.Contains("Precio"))
+				txtPrecio.Text = fila["Precio"].ToString();
 		}
 
 		private bool ValidarCantidad()
@@ -100,9 +141,7 @@ namespace ProyectoJoel.Vista
 				return false;
 			}
 
-			int cantidad;
-
-			if (!int.TryParse(txtCantidad.Text, out cantidad))
+			if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad))
 			{
 				MessageBox.Show("La cantidad solo debe contener números");
 				txtCantidad.Focus();
@@ -130,50 +169,50 @@ namespace ProyectoJoel.Vista
 				return;
 			}
 
-			int cantidad = Convert.ToInt32(txtCantidad.Text);
+			int cantidad = Convert.ToInt32(txtCantidad.Text.Trim());
 
-			decimal precio;
-
-			if (!decimal.TryParse(txtPrecio.Text, out precio))
+			if (!decimal.TryParse(txtPrecio.Text.Trim(), out decimal precio))
 			{
 				MessageBox.Show("Precio inválido");
 				return;
 			}
 
-			decimal subtotal =
-				cantidad * precio;
+			decimal subtotal = cantidad * precio;
 
 			detalleVenta.Rows.Add(
-				cmbProducto.SelectedValue,
+				Convert.ToInt32(cmbProducto.SelectedValue),
 				cmbProducto.Text,
 				precio,
 				cantidad,
 				subtotal);
 
 			totalVenta += subtotal;
-
-			txtTotal.Text =
-				totalVenta.ToString("0.00");
+			txtTotal.Text = totalVenta.ToString("0.00");
 
 			txtCantidad.Clear();
+			txtCantidad.Focus();
 		}
 
 		private void btnQuitar_Click(object sender, EventArgs e)
 		{
 			if (dgvDetalleVenta.CurrentRow == null)
+			{
+				MessageBox.Show("Seleccione un producto del detalle");
 				return;
+			}
 
 			decimal subtotal =
 				Convert.ToDecimal(
-				dgvDetalleVenta.CurrentRow.Cells["Subtotal"].Value);
+					dgvDetalleVenta.CurrentRow.Cells["Subtotal"].Value);
 
 			totalVenta -= subtotal;
 
-			txtTotal.Text =
-				totalVenta.ToString("0.00");
+			if (totalVenta < 0)
+				totalVenta = 0;
 
-			dgvDetalleVenta.Rows.Remove(
-				dgvDetalleVenta.CurrentRow);
+			txtTotal.Text = totalVenta.ToString("0.00");
+
+			dgvDetalleVenta.Rows.Remove(dgvDetalleVenta.CurrentRow);
 		}
 
 		private void btnGuardarVenta_Click(object sender, EventArgs e)
@@ -181,6 +220,18 @@ namespace ProyectoJoel.Vista
 			if (detalleVenta.Rows.Count == 0)
 			{
 				MessageBox.Show("Agregue productos");
+				return;
+			}
+
+			if (cmbCliente.SelectedIndex < 0)
+			{
+				MessageBox.Show("Seleccione un cliente");
+				return;
+			}
+
+			if (cmbEmpleado.SelectedIndex < 0)
+			{
+				MessageBox.Show("Seleccione un empleado");
 				return;
 			}
 
@@ -205,11 +256,81 @@ namespace ProyectoJoel.Vista
 
 				MessageBox.Show("Venta registrada correctamente");
 
+				GenerarReciboPDF(idVenta);
+
 				LimpiarVenta();
 			}
 			else
 			{
 				MessageBox.Show("No se pudo registrar la venta");
+			}
+		}
+
+		private DataTable CargarReciboVenta(int idVenta)
+		{
+			DataTable dt = new DataTable();
+
+			SqlConnection conexion =
+				new dbConexion().ObtenerConexion();
+
+			conexion.Open();
+
+			SqlCommand cmd =
+				new SqlCommand("RECIBO_VENTA", conexion);
+
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.Parameters.AddWithValue("@IdVenta", idVenta);
+
+			SqlDataAdapter da = new SqlDataAdapter(cmd);
+			da.Fill(dt);
+
+			conexion.Close();
+
+			return dt;
+		}
+
+		private void GenerarReciboPDF(int idVenta)
+		{
+			DataTable dt = CargarReciboVenta(idVenta);
+
+			if (dt.Rows.Count == 0)
+			{
+				MessageBox.Show("No se encontraron datos para el recibo.");
+				return;
+			}
+
+			LocalReport reporte = new LocalReport();
+
+			reporte.ReportEmbeddedResource =
+				"ProyectoJoel.Reportes.ReciboVenta.rdlc";
+
+			reporte.DataSources.Clear();
+
+			reporte.DataSources.Add(
+				new ReportDataSource("DSReciboVenta", dt));
+
+			try
+			{
+				byte[] pdf = reporte.Render("WORDOPENXML");
+
+				SaveFileDialog guardar = new SaveFileDialog();
+				guardar.Filter = "Archivo PDF|*.pdf";
+				guardar.Filter = "Archivo Word|*.docx";
+				guardar.FileName = "Recibo_Venta_" + idVenta + ".docx";
+
+				if (guardar.ShowDialog() == DialogResult.OK)
+				{
+					File.WriteAllBytes(guardar.FileName, pdf);
+					MessageBox.Show("Recibo generado correctamente.");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(
+					"Error al generar el recibo:\n" +
+					ex.Message + "\n\n" +
+					"Detalle:\n" +
+					ex.InnerException?.Message);
 			}
 		}
 
@@ -225,7 +346,6 @@ namespace ProyectoJoel.Vista
 			totalVenta = 0;
 
 			txtCantidad.Clear();
-
 			txtTotal.Text = "0.00";
 
 			if (cmbCliente.Items.Count > 0)
@@ -236,11 +356,35 @@ namespace ProyectoJoel.Vista
 
 			if (cmbProducto.Items.Count > 0)
 				cmbProducto.SelectedIndex = 0;
+
+			txtCantidad.Focus();
 		}
+
 
 		private void dgvDetalleVenta_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 
+		}
+
+		private void btnBuscarCliente_Click(object sender, EventArgs e)
+		{
+			BuscarCliente();
+		}
+
+		private void txtCliente_TextChanged(object sender, EventArgs e)
+		{
+			BuscarCliente();
+		}
+
+		private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+		{
+			BuscarEmpleado();
+		}
+
+		private void txtEmpleado_TextChanged(object sender, EventArgs e)
+		{
+			BuscarEmpleado();
+			
 		}
 	}
 }
