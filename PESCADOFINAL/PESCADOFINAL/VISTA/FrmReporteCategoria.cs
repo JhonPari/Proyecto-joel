@@ -25,6 +25,7 @@ namespace PESCADOFINAL.VISTA
             this.eSTADISTICA_PRODUCTOS_MAS_VENDIDOSTableAdapter.Fill(this.pezFinalDataSet2.ESTADISTICA_PRODUCTOS_MAS_VENDIDOS);
 
             this.reportViewer1.RefreshReport();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,5 +34,12 @@ namespace PESCADOFINAL.VISTA
             menu.Show();
             this.Close();
         }
-    }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			FrmReporteBivariado menu = new FrmReporteBivariado();
+			menu.Show();
+			this.Close();
+		}
+	}
 }
