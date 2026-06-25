@@ -66,5 +66,12 @@ namespace PESCADOFINAL.VISTA
 		{
 
 		}
+
+		private void btnMenu_Click(object sender, EventArgs e)
+		{
+			FrmMenuPrincipal menu = new FrmMenuPrincipal();
+			menu.Show();
+			this.Close();
+		}
 	}
 }

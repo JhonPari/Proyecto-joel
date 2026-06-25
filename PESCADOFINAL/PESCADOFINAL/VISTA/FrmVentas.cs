@@ -397,7 +397,8 @@ namespace PESCADOFINAL.VISTA
 				cambio.ToString("N2"),
 				"EXITO");
 
-			generarReciboPDF(venCod);
+			FrmReciboVenta frm = new FrmReciboVenta(venCod);
+			frm.ShowDialog();
 
 			limpiarTodo();
 			cargarProductos();

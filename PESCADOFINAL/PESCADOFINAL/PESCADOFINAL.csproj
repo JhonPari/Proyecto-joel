@@ -193,6 +193,12 @@
     <Compile Include="VISTA\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTA\FrmReciboVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmReciboVenta.Designer.cs">
+      <DependentUpon>FrmReciboVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmReporteBivariado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmReciboVenta.resx">
+      <DependentUpon>FrmReciboVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmReporteBivariado.resx">
       <DependentUpon>FrmReporteBivariado.cs</DependentUpon>

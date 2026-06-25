@@ -84,5 +84,12 @@ namespace PESCADOFINAL.VISTA
 		{
 			BuscarClienteEnGrid();
 		}
+
+		private void btnMenu_Click(object sender, EventArgs e)
+		{
+			FrmMenuCajero menu = new FrmMenuCajero();
+			menu.Show();
+			this.Close();
+		}
 	}
 }

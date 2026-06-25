@@ -335,3 +335,4 @@ C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.exe
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.pdb
 C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.exe.config
+C:\Users\ASUS\Documents\GitHub\Proyecto-joel\PESCADOFINAL\PESCADOFINAL\obj\Debug\PESCADOFINAL.VISTA.FrmReciboVenta.resources
